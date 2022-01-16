@@ -36,3 +36,10 @@ application {
     // Define the main class for the application.
     mainClass.set("entry.gradle.App")
 }
+
+tasks.register("showJavaHome") {
+    doFirst {
+        println(System.getenv("JAVA_HOME"))
+    }
+    println("this: $this")
+}
