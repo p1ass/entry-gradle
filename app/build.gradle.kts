@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    `library-convention`
 }
 
 repositories {
@@ -18,13 +19,6 @@ repositories {
 
 
 dependencies {
-    val lombokVersion = "1.18.22"
-    compileOnly("org.projectlombok:lombok:${lombokVersion}")
-    annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
-
-    testCompileOnly("org.projectlombok:lombok:${lombokVersion}")
-    testAnnotationProcessor("org.projectlombok:lombok:${lombokVersion}")
-
     // Use JUnit test framework.
     testImplementation("junit:junit:4.13.2")
 
